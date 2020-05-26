@@ -23,7 +23,7 @@
                     <div class="my-1 md:my-3 mr-2">
                         <div class="flex">
                             {{--grade--}}
-                            <div class="bg-white py-1 px-2 rounded-md shadow-md border border-gray-300 h-9">
+                            <div class="bg-white py-1 px-2 rounded-md shadow-md border border-gray-300">
                                 <button
                                     class="py-1 px-1 text-sm hover:bg-purple-700 hover:text-white text-gray-700 rounded-md focus:outline-none">
                                     Grade 4
