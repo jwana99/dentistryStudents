@@ -23,7 +23,7 @@
                     <div class="my-1 md:my-3 mr-2">
                         <div class="flex">
                             
-                            <div class="bg-white py-1 px-2 rounded-md shadow-md border border-gray-300 h-9">
+                            <div class="bg-white py-1 px-2 rounded-md shadow-md border border-gray-300">
                                 <button
                                     class="py-1 px-1 text-sm hover:bg-purple-700 hover:text-white text-gray-700 rounded-md focus:outline-none">
                                     Grade 4
@@ -94,6 +94,9 @@
                                 Type
                             </th>
                             <th class="font-semibold py-2 px-3 text-sm text-gray-100">
+                                Current Status
+                            </th>
+                            <th class="font-semibold py-2 px-3 text-sm text-gray-100">
                                 Patients
                             </th>
                             <th class="py-2 px-3 rounded-tr-md font-semibold text-sm text-gray-100">
@@ -103,11 +106,20 @@
                         </thead>
                         <tbody>
                         <tr>
-                            <td class="text-sm py-2 px-3 border-t border-gray-400 border-b border-gray-500">Jwana smth
-                                smth
+                            <td class="text-sm py-2 px-3 border-t border-gray-400 border-b border-gray-500">
+                                Jwana smth smth
                             </td>
-                            <td class="text-sm py-2 px-3 border-t border-gray-400 border-b border-gray-500">Fourth</td>
-                            <td class="text-sm py-2 px-3 border-t border-gray-400 border-b border-gray-500">Smth Smth
+                            <td class="text-sm py-2 px-3 border-t border-gray-400 border-b border-gray-500">
+                                Fourth
+                            </td>
+                            <td class="text-sm py-2 px-3 border-t border-gray-400 border-b border-gray-500">
+                                Smth Smth
+                            </td>
+                            <td class="text-sm py-2 px-3 border-t border-gray-400 border-b border-gray-500">
+                                <span
+                                    class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-purple-200 text-purple-700">
+                                    Available
+                                </span>
                             </td>
                             <td class="text-sm py-2 px-3 border-t border-gray-400 border-b border-gray-500">
                                 <div class="inset-y-0 right-0 flex">
@@ -124,11 +136,20 @@
                             </td>
                         </tr>
                         <tr>
-                            <td class="text-sm py-2 px-3 border-t border-gray-400 border-b border-gray-500">Jwana smth
-                                smth
+                            <td class="text-sm py-2 px-3 border-t border-gray-400 border-b border-gray-500">
+                                Jwana smth smth
                             </td>
-                            <td class="text-sm py-2 px-3 border-t border-gray-400 border-b border-gray-500">Fourth</td>
-                            <td class="text-sm py-2 px-3 border-t border-gray-400 border-b border-gray-500">Smth Smth
+                            <td class="text-sm py-2 px-3 border-t border-gray-400 border-b border-gray-500">
+                                Fourth
+                            </td>
+                            <td class="text-sm py-2 px-3 border-t border-gray-400 border-b border-gray-500">
+                                Smth Smth
+                            </td>
+                            <td class="text-sm py-2 px-3 border-t border-gray-400 border-b border-gray-500">
+                                <span
+                                    class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-red-200 text-red-700">
+                                   Not Available
+                                </span>
                             </td>
                             <td class="text-sm py-2 px-3 border-t border-gray-400 border-b border-gray-500">
                                 <div class="inset-y-0 right-0 flex">
@@ -145,11 +166,20 @@
                             </td>
                         </tr>
                         <tr>
-                            <td class="text-sm py-2 px-3 border-t border-gray-400 border-b border-gray-500">Jwana smth
-                                smth
+                            <td class="text-sm py-2 px-3 border-t border-gray-400 border-b border-gray-500">
+                                Jwana smth smth
                             </td>
-                            <td class="text-sm py-2 px-3 border-t border-gray-400 border-b border-gray-500">Fourth</td>
-                            <td class="text-sm py-2 px-3 border-t border-gray-400 border-b border-gray-500">Smth Smth
+                            <td class="text-sm py-2 px-3 border-t border-gray-400 border-b border-gray-500">
+                                Fourth
+                            </td>
+                            <td class="text-sm py-2 px-3 border-t border-gray-400 border-b border-gray-500">
+                                Smth Smth
+                            </td>
+                            <td class="text-sm py-2 px-3 border-t border-gray-400 border-b border-gray-500">
+                                <span
+                                    class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-purple-200 text-purple-700">
+                                    Available
+                                </span>
                             </td>
                             <td class="text-sm py-2 px-3 border-t border-gray-400 border-b border-gray-500">
                                 <div class="inset-y-0 right-0 flex">
@@ -166,11 +196,20 @@
                             </td>
                         </tr>
                         <tr>
-                            <td class="text-sm py-2 px-3 border-t border-gray-400 border-b border-gray-500">Jwana smth
-                                smth
+                            <td class="text-sm py-2 px-3 border-t border-gray-400 border-b border-gray-500">
+                                Jwana smth smth
                             </td>
-                            <td class="text-sm py-2 px-3 border-t border-gray-400 border-b border-gray-500">Fourth</td>
-                            <td class="text-sm py-2 px-3 border-t border-gray-400 border-b border-gray-500">Smth Smth
+                            <td class="text-sm py-2 px-3 border-t border-gray-400 border-b border-gray-500">
+                                Fourth
+                            </td>
+                            <td class="text-sm py-2 px-3 border-t border-gray-400 border-b border-gray-500">
+                                Smth Smth
+                            </td>
+                            <td class="text-sm py-2 px-3 border-t border-gray-400 border-b border-gray-500">
+                                <span
+                                    class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-purple-200 text-purple-700">
+                                    Available
+                                </span>
                             </td>
                             <td class="text-sm py-2 px-3 border-t border-gray-400 border-b border-gray-500">
                                 <div class="inset-y-0 right-0 flex">
@@ -187,11 +226,20 @@
                             </td>
                         </tr>
                         <tr>
-                            <td class="text-sm py-2 px-3 border-t border-gray-400 border-b border-gray-500">Jwana smth
-                                smth
+                            <td class="text-sm py-2 px-3 border-t border-gray-400 border-b border-gray-500">
+                                Jwana smth smth
                             </td>
-                            <td class="text-sm py-2 px-3 border-t border-gray-400 border-b border-gray-500">Fourth</td>
-                            <td class="text-sm py-2 px-3 border-t border-gray-400 border-b border-gray-500">Smth Smth
+                            <td class="text-sm py-2 px-3 border-t border-gray-400 border-b border-gray-500">
+                                Fourth
+                            </td>
+                            <td class="text-sm py-2 px-3 border-t border-gray-400 border-b border-gray-500">
+                                Smth Smth
+                            </td>
+                            <td class="text-sm py-2 px-3 border-t border-gray-400 border-b border-gray-500">
+                                <span
+                                    class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-purple-200 text-purple-700">
+                                    Available
+                                </span>
                             </td>
                             <td class="text-sm py-2 px-3 border-t border-gray-400 border-b border-gray-500">
                                 <div class="inset-y-0 right-0 flex">
@@ -207,28 +255,6 @@
                                 save
                             </td>
                         </tr>
-                        <tr>
-                            <td class="text-sm py-2 px-3 border-t border-gray-400 border-b border-gray-500">Jwana smth
-                                smth
-                            </td>
-                            <td class="text-sm py-2 px-3 border-t border-gray-400 border-b border-gray-500">Fourth</td>
-                            <td class="text-sm py-2 px-3 border-t border-gray-400 border-b border-gray-500">Smth Smth
-                            </td>
-                            <td class="text-sm py-2 px-3 border-t border-gray-400 border-b border-gray-500">
-                                <div class="inset-y-0 right-0 flex">
-                                    <select
-                                        class="rounded-md px-2 text-gray-700 py-1 border border-gray-300 focus:outline-none focus:border-purple-600 shadow-md">
-                                        <option>someone</option>
-                                        <option>someone someone</option>
-                                        <option>someone someone someone</option>
-                                    </select>
-                                </div>
-                            </td>
-                            <td class="text-sm py-2 px-3 border-t border-gray-400 border-b border-gray-500 text-purple-800 font-semibold hover:text-purple-500 cursor-pointer">
-                                save
-                            </td>
-                        </tr>
-
                         </tbody>
                     </table>
                 </div>

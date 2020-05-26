@@ -2,25 +2,161 @@
 
 @section('content')
     <div id="app" class="flex items-center h-auto w-full sm:w-8/12 mt-24 mb-12">
-        <div class="bg-gray-100 p-4 pl- rounded-lg sm:w-8/12 shadow-xl">
-            test <br>
-            test <br>
-            test <br>
-            test <br>
-            test <br>
-            test <br>
-            test <br>
-            test <br>
-            test <br>
-            test <br>
-            test <br>
-            test <br>
-            test <br>
-        </div>
+        <div class="bg-gray-100 p-4 sm:pr-14 rounded-lg w-full sm:w-8/12 shadow-xl">
+            {{--mobile avatar--}}
+            <div class="flex justify-center">
+                <div class="w-1/2">
+                    <img src="https://api.adorable.io/avatars/285/hehe"
+                         class="block lg:hidden rounded-full shadow-2xl -mt-20 mb-4 h-auto w-full bg-cover bg-center border border-gray-400">
+                </div>
+            </div>
+            {{--Students Name--}}
+            <div class="w-full">
+                <h1 class="text-2xl font-extrabold capitalize tracking-wide leading-8 text-gray-800 pb-1 border-b border-gray-600">
+                    Orjuwan Dakhil Jawadh
+                </h1>
+            </div>
+            {{--Patients Progress--}}
+            <div class="flex relative flex-col mt-4">
+                <h1 class="text-sm text-gray-700 font-bold mb-1">
+                    Patients Progress
+                </h1>
+                <div class="h-32 overflow-y-auto">
+                    <div class="flex w-full bg-gray-700 rounded-lg shadow-md p-2 mt-1">
+                        <div class="flex justify-start w-full">
+                            <div class="flex">
+                                <p class="text-white text-xs self-center font-semibold leading-5">
+                                    Someone Someone - 07816151297
+                                </p>
+                            </div>
+                        </div>
 
-        <div class="sm:w-4/12 -ml-10">
+                        <div class="flex justify-end w-full">
+                            <div>
+                          <span
+                              class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-red-300 text-red-700">
+                            Unfinishedh
+                        </span>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="flex w-full bg-gray-700 rounded-lg shadow-md p-2 mt-1">
+                        <div class="flex justify-start w-full">
+                            <div class="flex">
+                                <p class="text-white text-xs self-center font-semibold leading-5">
+                                    Someone Someone - 07816151297
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex justify-end w-full">
+                            <div>
+                          <span
+                              class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-purple-300 text-purple-700">
+                            Finished
+                        </span>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="flex w-full bg-gray-700 rounded-lg shadow-md p-2 mt-1">
+                        <div class="flex justify-start w-full">
+                            <div class="flex">
+                                <p class="text-white text-xs self-center font-semibold leading-5">
+                                    Someone Someone - 07816151297
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex justify-end w-full">
+                            <div>
+                          <span
+                              class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-purple-300 text-purple-700">
+                            Finished
+                        </span>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="flex w-full bg-gray-700 rounded-lg shadow-md p-2 mt-1">
+                        <div class="flex justify-start w-full">
+                            <div class="flex">
+                                <p class="text-white text-xs self-center font-semibold leading-5">
+                                    Someone Someone - 07816151297
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex justify-end w-full">
+                            <div>
+                          <span
+                              class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-purple-300 text-purple-700">
+                            Finished
+                        </span>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="flex w-full bg-gray-700 rounded-lg shadow-md p-2 mt-1">
+                        <div class="flex justify-start w-full">
+                            <div class="flex">
+                                <p class="text-white text-xs self-center font-semibold leading-5">
+                                    Someone Someone - 07816151297
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex justify-end w-full">
+                            <div>
+                          <span
+                              class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-purple-300 text-purple-700">
+                            Finished
+                        </span>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="flex w-full bg-gray-700 rounded-lg shadow-md p-2 mt-1">
+                        <div class="flex justify-start w-full">
+                            <div class="flex">
+                                <p class="text-white text-xs self-center font-semibold leading-5">
+                                    Someone Someone - 07816151297
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex justify-end w-full">
+                            <div>
+                          <span
+                              class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-purple-300 text-purple-700">
+                            Finished
+                        </span>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="h-5 sm:h-10 gradient absolute w-full bottom-0">
+                </div>
+            </div>
+            {{--Request patient--}}
+            <div class="flex w-full justify-end mt-6">
+                <a class="text-sm font-semibold leading-5 text-blue-600 hover:text-blue-400 cursor-pointer">
+                    Need A Patient?
+                </a>
+            </div>
+        </div>
+        {{--desktop avatar--}}
+        <div>
             <img src="https://api.adorable.io/avatars/285/hehe"
-                 class="rounded-lg w-full h-auto shadow-lg">
+                 class="rounded-none w-0 sm:w-full -ml-10 lg:rounded-lg shadow-2xl hidden lg:block">
         </div>
 
     </div>
@@ -49,56 +185,3 @@
         })
     </script>
 @endpush
-{{--<div class="flex-wrap w-full items-center sm:ml-10 mt-10">--}}
-{{--    <div class="flex w-6/12">--}}
-{{--        <!--Main Col-->--}}
-{{--        <div id="profile"--}}
-{{--             class="flex w-full lg:w-3/5 rounded-lg shadow-2xl bg-gray-100">--}}
-{{--            <div class="p-1 md:p-5 text-center lg:text-left">--}}
-{{--                <!-- Image for mobile view-->--}}
-{{--                <div class="block lg:hidden rounded-full shadow-xl mx-auto -mt-16 h-48 w-48 bg-cover bg-center"--}}
-{{--                     style="background-image: url('https://api.adorable.io/avatars/285/student')"></div>--}}
-{{--                <h1 class="text-3xl pt-6 sm:pt-1">The Full Name</h1>--}}
-{{--                <div class="mx-auto lg:mx-0 w-full pt-2 border-b-2 border-gray-900 opacity-25"></div>--}}
-
-{{--                <div class="flex flex-wrap ml-2 w-full mt-2">--}}
-{{--                    <h1 class="text-2xl sm:ml-0">Current Patient</h1>--}}
-{{--                    <h1 class="text-left text-gray-700 text-md tracking-wider mt-2 w-full">Name: patient</h1>--}}
-{{--                    <h1 class="text-left text-gray-700 text-md tracking-wider w-full">Phone Number:--}}
-{{--                        874578437864</h1>--}}
-{{--                    <h1 class="text-left text-gray-700 text-md tracking-wider w-full">Procedure: cleaning</h1>--}}
-{{--                    <h1 class="text-2xl mt-1 sm:ml-0">Past Patients</h1>--}}
-{{--                    <h1 class="text-left text-gray-700 text-md tracking-wider mt-2 w-full">Name: patient</h1>--}}
-{{--                    <h1 class="text-left text-gray-700 text-md tracking-wider w-full">Phone Number:--}}
-{{--                        874578437864</h1>--}}
-{{--                    <h1 class="text-left text-gray-700 text-md tracking-wider w-full">Procedure: cleaning</h1>--}}
-
-{{--                                      <h1 class="text-2xl text-center sm:ml-0">No current patients</h1>--}}
-{{--                </div>--}}
-
-{{--                                <div class="flex flex-wrap w-full ml-2 sm:ml-0">--}}
-{{--                                    <div class="flex w-full sm:w-1/2">--}}
-{{--                                        <h1 class="text-3xl text-blue-500 font-semibold">11</h1>--}}
-{{--                                        <h1 class="text-gray-900 text-sm font-semibold mt-4 ml-1">Finished Patients</h1>--}}
-{{--                                    </div>--}}
-{{--                                    <div class="flex w-full sm:justify-end sm:w-1/2">--}}
-{{--                                        <h1 class="text-3xl text-red-500 font-semibold">9</h1>--}}
-{{--                                        <h1 class="text-gray-900 text-sm font-semibold mt-4 ml-1">Unfinished Patients</h1>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-
-{{--                <div class="flex w-full justify-end p-2 sm:p-0 mt-4">--}}
-{{--                    <h1 class="text-blue-700 hover:text-blue-500 text-md cursor-pointer">Need a patient?</h1>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-
-{{--    </div>--}}
-{{--    <div class="flex w-11/12 ml-3 sm:-ml-10 -mt-6 sm:mt-0 rounded-lg--}}
-{{--                        sm:w-5/12">--}}
-{{--        <!-- Big profile image for side bar (desktop) -->--}}
-{{--        <img src="https://api.adorable.io/avatars/285/hehe"--}}
-{{--             class="rounded-none lg:rounded-lg shadow-2xl">--}}
-{{--        <!-- Image from: http://unsplash.com/photos/MP0IUfwrn0A -->--}}
-{{--    </div>--}}
-{{--</div>--}}

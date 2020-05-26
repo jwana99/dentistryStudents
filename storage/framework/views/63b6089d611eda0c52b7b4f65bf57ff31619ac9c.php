@@ -8,13 +8,15 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tailwindcss/ui@latest/dist/tailwind-ui.min.css">
 
     <link rel="stylesheet" href="https://unpkg.com/tailwindcss/dist/tailwind.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800,800i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
     <link id="icon" rel="icon" href="/icons/tooth (2).svg">
     <title>Toothie</title>
     <style>
         body {
-            font-family: 'Raleway', sans-serif;
+            font-family: 'Comfortaa', cursive;
         }
+
         .dropdown:hover .dropdown-menu {
             display: block;
         }
