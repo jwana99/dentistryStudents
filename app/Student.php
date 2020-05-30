@@ -10,8 +10,12 @@ use Illuminate\Support\Facades\Hash;
 
 class Student extends Authenticatable
 {
-    use Notifiable;
+    use Notifiable ;
 
+    public function patients()
+    {
+        return $this->hasMany('App\Patient');
+    }
     /**
      * The attributes that are mass assignable.
      *
@@ -28,6 +32,14 @@ class Student extends Authenticatable
     public function setPasswordAttribute($value)
     {
         $this->attributes['password'] = hash::make($value);
+    }
+
+    public function isAdmin() {
+        return $this->role === 'admin';
+    }
+
+    public function isUser() {
+        return $this->role === 'user';
     }
 
     /**

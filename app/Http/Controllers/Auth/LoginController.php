@@ -4,7 +4,9 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
+use Illuminate\Http\Request;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
@@ -37,4 +39,36 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+
+    protected function authenticated(Request $request, $user)
+    {
+        // to admin dashboard
+        if ($user->isAdmin()) {
+            return redirect(route('dashboard'));
+        } // to user dashboard
+        else if ($user->isUser()) {
+            return redirect(route('student_account'));
+        }
+
+        abort(404);
+    }
+
+    public function showLoginForm()
+    {
+        return view('students.login');
+    }
+
+    public function guard()
+    {
+        return Auth::guard('student');
+    }
+
+//    public function login(Request $request)
+//    {
+//        $student= [
+//            'email'
+//        ]
+//        Auth::guard('student')->login($student);
+//        $this->validateLogin($request);
+//    }
 }

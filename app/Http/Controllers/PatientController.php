@@ -43,9 +43,8 @@ class PatientController extends Controller
     {
         $rules = [
             "name" => "required",
-            "email" => "required",
             "number" => "required",
-            "process_type" => "required",
+            "procedure_type" => "required",
         ];
         $data = $this->validate($request, $rules);
         $patient = Patient::create($data);

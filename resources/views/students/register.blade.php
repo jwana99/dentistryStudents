@@ -83,51 +83,6 @@
                         </div>
                     </div>
                 </div>
-{{--                --}}{{--patient info--}}
-{{--                <div class="flex flex-wrap w-full mt-3 mb-3">--}}
-{{--                    --}}{{--the type--}}
-{{--                    <div class="w-full px-3">--}}
-{{--                        <label class="block uppercase tracking-wide text-gray-700 text-xs mb-2" for="grid-first-name">--}}
-{{--                            Type:--}}
-{{--                        </label>--}}
-{{--                        <div class="flex flex-wrap justify-center">--}}
-{{--                            <div class="flex mx-1 sm:mx-2">--}}
-{{--                                <input type="text" name="process_type" :value="activatedType" hidden>--}}
-{{--                                <input--}}
-{{--                                    readonly--}}
-{{--                                    value="Filling"--}}
-{{--                                    @click="activatingType('Filling')"--}}
-{{--                                    :class="{'bg-purple-600': activatedType.includes('Filling')}"--}}
-{{--                                    class="text-center focus:outline-none text-sm text-white bg-gray-700 rounded-md py-1 m-1 shadow-md cursor-pointer">--}}
-{{--                            </div>--}}
-{{--                            <div class="flex mx-1 sm:mx-2">--}}
-{{--                                <input--}}
-{{--                                    readonly--}}
-{{--                                    value="Cleaning"--}}
-{{--                                    @click="activatingType('Cleaning')"--}}
-{{--                                    :class="{'bg-purple-600': activatedType.includes('Cleaning')}"--}}
-{{--                                    class="text-center focus:outline-none text-sm text-white bg-gray-700 rounded-md py-1 m-1 shadow-md cursor-pointer">--}}
-{{--                            </div>--}}
-{{--                            <div class="flex mx-1 sm:mx-2">--}}
-{{--                                <input--}}
-{{--                                    readonly--}}
-{{--                                    value="Detoothing"--}}
-{{--                                    @click="activatingType('Detoothing')"--}}
-{{--                                    :class="{'bg-purple-600': activatedType.includes('Detoothing')}"--}}
-{{--                                    class="text-center focus:outline-none text-sm text-white bg-gray-700 rounded-md py-1 m-1 shadow-md cursor-pointer">--}}
-{{--                            </div>--}}
-{{--                            <div class="flex mx-1 sm:mx-2">--}}
-{{--                                <input--}}
-{{--                                    readonly--}}
-{{--                                    value="Drilling"--}}
-{{--                                    @click="activatingType('Drilling')"--}}
-{{--                                    :class="{'bg-purple-600': activatedType.includes('Drilling')}"--}}
-{{--                                    class="text-center focus:outline-none text-sm text-white bg-gray-700 rounded-md py-1 m-1 shadow-md cursor-pointer">--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-                {{--Sign up--}}
                 <div class="flex w-full justify-end items-end mt-1 sm:mt-4">
                     <button type="submit"
                             class="bg-white hover:bg-purple-600 hover:text-white hover:border-purple-400 focus:outline-none text-gray-800 font-semibold text-sm py-1 px-3 my-2 border-b-2 border-purple-600 rounded-md shadow-md">

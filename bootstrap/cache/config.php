@@ -563,7 +563,7 @@
     'reporting' => 
     array (
       'anonymize_ips' => true,
-      'collect_git_information' => true,
+      'collect_git_information' => false,
       'report_queries' => true,
       'maximum_number_of_collected_queries' => 200,
       'report_query_bindings' => true,
@@ -580,6 +580,7 @@
     'register_commands' => false,
     'ignored_solution_providers' => 
     array (
+      0 => 'Facade\\Ignition\\SolutionProviders\\MissingPackageSolutionProvider',
     ),
     'enable_runnable_solutions' => NULL,
     'remote_sites_path' => '',

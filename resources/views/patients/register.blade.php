@@ -27,61 +27,33 @@
                         class="w-full text-gray-700 shadow-sm border-b-2 border-gray-7600 rounded-md py-2 px-3 leading-tight focus:outline-none bg-white focus:border-purple-500"
                         name="number" type="text" placeholder="077898898797">
                 </div>
-                {{--email--}}
-                <div class="w-full px-3 mt-5">
-                    <label class="block uppercase tracking-wide text-gray-600 mb-1 text-xs" for="grid-first-name">
-                        Email address
-                    </label>
-                    <input
-                        class="w-full text-gray-700 shadow-sm border-b-2 border-gray-7600 rounded-md py-2 px-3 leading-tight focus:outline-none bg-white focus:border-purple-500"
-                        name="email" type="text" placeholder="077898898797">
-                    <h1 class="text-xs text-gray-600 italic">
-                        PS: email is optional
-                    </h1>
-                </div>
                 {{--patient info--}}
                 <div class="flex flex-wrap w-full mt-6 mb-3">
                     {{--the type--}}
+
                     <div class="w-full px-3">
                         <label class="block uppercase tracking-wide text-gray-700 text-xs mb-2" for="grid-first-name">
-                            Type:
+                            Procedure Type:
                         </label>
-                        <div class="flex flex-wrap justify-center">
-                            <div class="flex mx-1 sm:mx-2">
-                                <input type="text" name="process_type" :value="activatedType" hidden>
-                                <input
-                                    readonly
-                                    value="Filling"
-                                    @click="activatingType('Filling')"
-                                    :class="{'bg-purple-600': activatedType.includes('Filling')}"
-                                    class="text-center focus:outline-none text-sm text-white bg-gray-700 rounded-md py-1 m-1 shadow-md sm:cursor-pointer">
-                            </div>
-                            <div class="flex mx-1 sm:mx-2">
-                                <input
-                                    readonly
-                                    value="Cleaning"
-                                    @click="activatingType('Cleaning')"
-                                    :class="{'bg-purple-600': activatedType.includes('Cleaning')}"
-                                    class="text-center focus:outline-none text-sm text-white bg-gray-700 rounded-md py-1 m-1 shadow-md sm:cursor-pointer">
-                            </div>
-                            <div class="flex mx-1 sm:mx-2">
-                                <input
-                                    readonly
-                                    value="Detoothing"
-                                    @click="activatingType('Detoothing')"
-                                    :class="{'bg-purple-600': activatedType.includes('Detoothing')}"
-                                    class="text-center focus:outline-none text-sm text-white bg-gray-700 rounded-md py-1 m-1 shadow-md sm:cursor-pointer">
-                            </div>
-                            <div class="flex mx-1 sm:mx-2">
-                                <input
-                                    readonly
-                                    value="Drilling"
-                                    @click="activatingType('Drilling')"
-                                    :class="{'bg-purple-600': activatedType.includes('Drilling')}"
-                                    class="text-center focus:outline-none text-sm text-white bg-gray-700 rounded-md py-1 m-1 shadow-md sm:cursor-pointer">
+                        <div class="relative w-full">
+                            <select v-model="selected"
+                                    class="appearance-none w-full shadow-lg bg-white text-gray-600 text-sm border border-gray-400 rounded-md py-2 px-4 focus:outline-none focus:border-purple-400 ">
+                                <option disabled hidden :value="null">Choose the procedure you want</option>
+                                <option v-for="procedure in procedures">
+                                    @{{ procedure }}
+                                </option>
+                            </select>
+                            <div class="pointer-events-none absolute right-0 top-0 mt-3 mr-2">
+                                <svg class="fill-current bg-white text-center text-purple-400 h-4 w-4"
+                                     xmlns="http://www.w3.org/2000/svg"
+                                     viewBox="0 0 20 20">
+                                    <path
+                                        d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/>
+                                </svg>
                             </div>
                         </div>
                     </div>
+                    <input name="procedure_type" type="text" hidden v-bind:value="selected">
                 </div>
                 {{--Sign up--}}
                 <div class="flex w-full justify-end items-end mt-2 sm:mt-6">
@@ -128,14 +100,19 @@
             data: {
                 isInvisible: true,
                 isVisible: false,
-                activatedType: [],
+                procedures: [],
+                selected: null
             },
             methods: {
-                activatingType(type) {
-                    this.activatedType = type;
-                },
+                showProcedures() {
+                    axios.get('/students/api/procedures/fifth').then(response => {
+                        this.procedures = response.data.procedures;
+                    })
+                }
             },
-
+            mounted() {
+                this.showProcedures();
+            }
         })
     </script>
 @endpush

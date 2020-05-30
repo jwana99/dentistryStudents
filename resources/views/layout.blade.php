@@ -16,6 +16,20 @@
             font-family: 'Comfortaa', cursive;
         }
 
+        /*body::-webkit-scrollbar {*/
+        /*    width: 12px; !* width of the entire scrollbar *!*/
+        /*}*/
+
+        /*body::-webkit-scrollbar-track {*/
+        /*    background: orange; !* color of the tracking area *!*/
+        /*}*/
+
+        /*body::-webkit-scrollbar-thumb {*/
+        /*    background-color: blue; !* color of the scroll thumb *!*/
+        /*    border-radius: 20px; !* roundness of the scroll thumb *!*/
+        /*    border: 3px solid orange; !* creates padding around scroll thumb *!*/
+        /*}*/
+
         .gradient {
             background: transparent; /* fallback for old browsers */
             background: -webkit-linear-gradient(to bottom, transparent, #F4F5F7); /* Chrome 10-25, Safari 5.1-6 */

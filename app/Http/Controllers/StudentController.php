@@ -2,12 +2,28 @@
 
 namespace App\Http\Controllers;
 
+use App\Enums\FifthProcedure;
+use App\Enums\FourthProcedure;
 use App\Student;
+use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Response;
+use Illuminate\Foundation\Auth\RegistersUsers;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Validator;
+
 
 class StudentController extends Controller
 {
+    use RegistersUsers;
+
+    protected function guard()
+    {
+        return Auth::guard('student');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -20,12 +36,33 @@ class StudentController extends Controller
 
     public function accountPage()
     {
+
         return view('students.account');
     }
 
-    public function loginPage()
+    public function procedures($stage)
     {
-        return view('students.login');
+        switch ($stage) {
+            case "fourth":
+                $procedures = FourthProcedure::toSelectArray();
+                return $procedures = ['procedures' => $procedures];
+                break;
+            case "fifth":
+                $procedures = FifthProcedure::toSelectArray();
+                return $procedures = ['procedures' => $procedures];
+                break;
+        }
+    }
+
+    public function storeRequest(Request $request)
+    {
+        $rules = [
+            "name" => "required",
+            "stage" => "required",
+            "procedure" => "required",
+        ];
+        $data = $this->validate($request, $rules);
+        \App\Request::create($data);
     }
 
     /**
@@ -55,9 +92,14 @@ class StudentController extends Controller
         ];
         $data = $this->validate($request, $rules);
         $student = Student::create($data);
-//        return Response::redirectTo("/students/account");
-
+        Auth::guard('student')->login($student);
+        return Response::redirectTo("/students/account");
     }
+
+//    public function login()
+//    {
+//        Auth::guard('student')->login($user);
+//    }
 
     public function requestPatientPage()
     {

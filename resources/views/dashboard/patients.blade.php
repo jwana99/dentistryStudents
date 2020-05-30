@@ -1,8 +1,8 @@
 @extends('dashboard.layout')
 
 @section('content')
-    <div id="app" class="flex mt-5 w-full justify-center">
-        <div class="bg-gray-100 rounded-md shadow-md p-4 w-11/12">
+    <div id="app" class="flex mt-3 w-full justify-center">
+        <div class="bg-gray-100 rounded-md shadow-md md:p-4 p-2 w-11/12">
             <h1 class="md:text-3xl text-2xl font-semibold text-purple-500 tracking-wide">Patients</h1>
             {{--sorting--}}
             <div class="flex flex-wrap w-full">
@@ -10,7 +10,7 @@
                     {{--search--}}
                     <div class="my-1 md:my-3 mr-2">
                         <div class="relative text-gray-600">
-                            <input type="input" name="search" placeholder="Search"
+                            <input v-model="searched" type="input" name="search" placeholder="Search"
                                    class="bg-white border py-2 px-3 focus:border-purple-600 pr-5 rounded-md shadow-md text-sm focus:outline-none">
                             <svg class="h-4 w-4 focus:text-purple-600 fill-current absolute right-0 top-0 mt-3 mr-4"
                                  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
@@ -21,7 +21,7 @@
                     </div>
                 </div>
                 {{--pagination--}}
-                <div class="flex justify-end w-4/12">
+                <div class="flex justify-end w-full sm:w-4/12">
                     <div class="flex mt-0 sm:mt-3 self-end md:self-start">
                         <button @click="paginate(-1)"
                                 type="button"
@@ -53,7 +53,7 @@
                                 Name
                             </th>
                             <th class="font-semibold py-2 px-3 text-sm text-gray-100">
-                                Type
+                                Procedure Type
                             </th>
                             <th class="py-2 px-3 rounded-tr-md font-semibold text-sm text-gray-100">
                                 Number
@@ -61,14 +61,14 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <tr v-for="patient in patients">
-                            <td class="text-sm py-2 px-3 border-t border-gray-400 border-b border-gray-500">
+                        <tr v-for="patient in searching">
+                            <td class="capitalize text-sm py-2 px-3 border-t border-gray-400 border-gray-500">
                                 @{{ patient.name }}
                             </td>
-                            <td class="text-sm py-2 px-3 border-t border-gray-400 border-b border-gray-500">
-                                @{{ patients.type }}
+                            <td class="capitalize text-sm py-2 px-3 border-t border-gray-400 border-gray-500">
+                                @{{ patient.procedure_type }}
                             </td>
-                            <td class="text-sm py-2 px-3 border-t border-gray-400 border-b border-gray-500">
+                            <td class="text-sm py-2 px-3 border-t border-gray-400 border-gray-500">
                                 @{{ patient.number }}
                             </td>
                         </tr>
@@ -89,13 +89,21 @@
                 patients: [],
                 page: 1,
                 lastPage: 1,
+                searched: ''
             },
             methods: {
                 fetchData() {
                     axios.get(`/dashboard/api/patients?page=${this.page}`).then(response => {
                         this.patients = response.data.patients.data;
-                        this.lastPage = response.data.patients.lastPage;
+                        this.lastPage = response.data.patients.last_page;
                     })
+                },
+                computed: {
+                    searching() {
+                        return this.patients.filter(patient => {
+                            return patient.name.includes(this.searched)
+                        })
+                    }
                 },
                 paginate(value) {
                     this.page += value;

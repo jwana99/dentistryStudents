@@ -1,24 +1,27 @@
 <?php
 //->middleware('auth:student')
-Route::get('/students/account', 'StudentController@accountPage');
+Route::get('/students/account', 'StudentController@accountPage')->middleware('auth:student')->name('student_account');
 Route::get('/students/register', 'StudentController@registerPage')->name('welcome');
 Route::post('/students/register', 'StudentController@store');
-Route::get('/students/login', 'StudentController@loginPage');
-Route::get('/students/request', 'StudentsController@requestPatientPage');
-//Route::post('/students/request', 'StudentController@');
+Route::get('/students/login', 'Auth\LoginController@showLoginForm')->name('login');
+Route::post('/students/login', 'Auth\LoginController@login');
+Route::get('/students/logout', 'Auth\LoginController@logout');
+Route::get('/students/api/procedures/{stage}', 'StudentController@procedures');
+Route::post('/students/requests', 'StudentController@storeRequest');
+
 
 Route::get('/patients/register', 'PatientController@index');
 Route::post('/patients/register', 'PatientController@store');
 Route::get('/patients/success', 'PatientController@success');
 
-Route::get('/dashboard/home', 'Dashboard@index');
-Route::get('/dashboard/students', 'Dashboard@studentsPage');
-Route::get('/dashboard/api/students', 'Dashboard@studentsApi');
-Route::get('/dashboard/requests', 'Dashboard@requestsPage');
-Route::get('/dashboard/patients', 'Dashboard@patientsPage');
-Route::get('/dashboard/api/patients', 'Dashboard@patientsApi');
-//Route::get('/dashboard/api/patients', 'Dashboard@patientsApi');
+Route::group(['middleware' => ['auth:student', 'admin']], function () {
+    Route::get('/dashboard/home', 'DashboardController@index')->name('dashboard');
+    Route::get('/dashboard/students', 'DashboardController@studentsPage');
+    Route::get('/dashboard/api/students', 'DashboardController@studentsApi');
+    Route::get('/dashboard/requests', 'DashboardController@requestsPage');
+    Route::get('/dashboard/patients', 'DashboardController@patientsPage');
+    Route::get('/dashboard/api/patients', 'DashboardController@patientsApi');
+    Route::get('/dashboard/api/requests', 'DashboardController@requestsApi');
+});
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+Route::view('/404', '404');
