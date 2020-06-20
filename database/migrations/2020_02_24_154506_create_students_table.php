@@ -19,6 +19,7 @@ class CreateStudentsTable extends Migration
             $table->string('email');
             $table->string('number');
             $table->string('stage');
+            $table->enum('status', ['available','unavailable'])->default('available');
             $table->enum('role', ['user','admin'])->default('user');
             $table->string('password');
             $table->rememberToken();

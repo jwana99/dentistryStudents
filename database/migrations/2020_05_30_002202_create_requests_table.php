@@ -17,6 +17,7 @@ class CreateRequestsTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('stage');
+            $table->integer('student_id');
             $table->string('procedure');
             $table->timestamps();
         });

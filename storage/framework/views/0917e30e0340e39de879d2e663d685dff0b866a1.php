@@ -63,7 +63,6 @@
                             <div class="flex mx-1 sm:mx-2">
                                 <input
                                     readonly
-                                    name="stage"
                                     value="Fourth stage"
                                     @click="activatingStage('Fourth Stage')"
                                     :class="{'bg-purple-600': activatedStage.includes('Fourth Stage')}"
@@ -72,12 +71,12 @@
                             <div class="flex mx-1 sm:mx-2">
                                 <input
                                     readonly
-                                    name="stage"
                                     value="Fifth stage"
                                     @click="activatingStage('Fifth Stage')"
                                     :class="{'bg-purple-600': activatedStage.includes('Fifth Stage')}"
                                     class="text-center focus:outline-none text-sm text-white bg-gray-700 rounded-md py-1 m-1 shadow-md cursor-pointer">
                             </div>
+                            <input type="text" hidden v-bind:value="activatedStage" name="stage">
                         </div>
                     </div>
                 </div>
@@ -102,15 +101,15 @@
                     faster!
                     <br>
                     If you still don't have an account please
-                    <t @click="isInvisible =! isInvisible, isVisible =! isVisible"
+                    <a @click="isInvisible =! isInvisible, isVisible =! isVisible"
                        class="font-extrabold text-md text-purple-900 hover:text-purple-600 cursor-pointer">
                         SIGN UP
-                    </t>
+                    </a>
                     or if already have an account you can access it by
                     simply clicking
-                    <t class="font-extrabold text-md text-purple-900 hover:text-purple-600 cursor-pointer">
+                    <a class="font-extrabold text-md text-purple-900 hover:text-purple-600 cursor-pointer">
                         LOGIN
-                    </t>
+                    </a>
                 </p>
             </div>
             
@@ -129,17 +128,9 @@
             data: {
                 isInvisible: true,
                 isVisible: false,
-                activatedType: [],
-                activatedStage: [],
-                name: "test",
+                activatedStage: '',
             },
             methods: {
-                activatingType(type) {
-                    let index = this.activatedType.indexOf(type);
-                    if (index == -1) this.activatedType.push(type);
-                    else this.activatedType.splice(index, 1);
-
-                },
                 activatingStage(stage) {
                     this.activatedStage = stage;
                     console.log(this.activatedStage)

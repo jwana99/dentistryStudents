@@ -1,6 +1,6 @@
 <?php $__env->startSection('content'); ?>
     <div id="app" class="flex items-center h-auto w-full sm:w-8/12 mt-24 mb-12">
-        <div class="bg-gray-100 p-4 sm:pr-14 rounded-lg w-full sm:w-8/12 shadow-xl">
+        <div class="bg-gray-100 p-4 sm:pr-12 rounded-lg w-full sm:w-8/12 shadow-xl">
             
             <div class="flex justify-center">
                 <div class="w-1/2">
@@ -25,7 +25,7 @@
                     <div class="relative w-full">
                         <select v-model="selected"
                                 class="appearance-none w-full shadow-lg bg-white text-gray-600 text-sm border border-gray-400 rounded-md py-2 px-4 focus:outline-none focus:border-purple-400 ">
-                            <option disabled hidden :value="null">Choose the procedure you want</option>
+                            <option disabled hidden :value="null">Procedures</option>
                             <option v-for="procedure in procedures">
                                 {{procedure}}
                             </option>
@@ -60,11 +60,11 @@
                         Procedures Record
                     </h1>
                     <div class="h-32 overflow-y-auto">
-                        <div class="flex w-full bg-gray-700 rounded-lg shadow-md p-2 mt-1">
+                        <div v-for="patient in patients" class="flex w-full bg-gray-700 rounded-lg shadow-md p-2 mt-1">
                             <div class="flex justify-start w-full">
                                 <div class="flex">
                                     <p class="text-white text-xs self-center font-semibold leading-5">
-                                        Someone Someone - 07816151297
+                                        {{ patient.name }} - {{ patient.number }}
                                     </p>
                                 </div>
                             </div>
@@ -72,114 +72,15 @@
                             <div class="flex justify-end w-full">
                                 <div>
                           <span
-                              class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-red-300 text-red-700">
-                            Unfinished
+                              class="capitalize px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-red-300 text-red-700">
+                            {{patient.status}}
                         </span>
                                 </div>
 
                             </div>
 
                         </div>
-                        <div class="flex w-full bg-gray-700 rounded-lg shadow-md p-2 mt-1">
-                            <div class="flex justify-start w-full">
-                                <div class="flex">
-                                    <p class="text-white text-xs self-center font-semibold leading-5">
-                                        Someone Someone - 07816151297
-                                    </p>
-                                </div>
-                            </div>
 
-                            <div class="flex justify-end w-full">
-                                <div>
-                          <span
-                              class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-purple-300 text-purple-700">
-                            Finished
-                        </span>
-                                </div>
-
-                            </div>
-
-                        </div>
-                        <div class="flex w-full bg-gray-700 rounded-lg shadow-md p-2 mt-1">
-                            <div class="flex justify-start w-full">
-                                <div class="flex">
-                                    <p class="text-white text-xs self-center font-semibold leading-5">
-                                        Someone Someone - 07816151297
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="flex justify-end w-full">
-                                <div>
-                          <span
-                              class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-purple-300 text-purple-700">
-                            Finished
-                        </span>
-                                </div>
-
-                            </div>
-
-                        </div>
-                        <div class="flex w-full bg-gray-700 rounded-lg shadow-md p-2 mt-1">
-                            <div class="flex justify-start w-full">
-                                <div class="flex">
-                                    <p class="text-white text-xs self-center font-semibold leading-5">
-                                        Someone Someone - 07816151297
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="flex justify-end w-full">
-                                <div>
-                          <span
-                              class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-purple-300 text-purple-700">
-                            Finished
-                        </span>
-                                </div>
-
-                            </div>
-
-                        </div>
-                        <div class="flex w-full bg-gray-700 rounded-lg shadow-md p-2 mt-1">
-                            <div class="flex justify-start w-full">
-                                <div class="flex">
-                                    <p class="text-white text-xs self-center font-semibold leading-5">
-                                        Someone Someone - 07816151297
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="flex justify-end w-full">
-                                <div>
-                          <span
-                              class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-purple-300 text-purple-700">
-                            Finished
-                        </span>
-                                </div>
-
-                            </div>
-
-                        </div>
-                        <div class="flex w-full bg-gray-700 rounded-lg shadow-md p-2 mt-1">
-                            <div class="flex justify-start w-full">
-                                <div class="flex">
-                                    <p class="text-white text-xs self-center font-semibold leading-5">
-                                        Someone Someone - 07816151297
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="flex justify-end w-full">
-                                <div>
-                          <span
-                              class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-purple-300 text-purple-700">
-                            Finished
-                        </span>
-                                </div>
-
-                            </div>
-
-                        </div>
                     </div>
                     <div class="h-5 sm:h-10 gradient absolute w-full bottom-0">
                     </div>
@@ -207,19 +108,22 @@
             el: '#app',
             data: {
                 stage: "<?php echo e(auth('student')->user()->stage); ?>",
+                status: "<?php echo e(auth('student')->user()->status); ?>",
                 procedures: [],
                 selected: null,
                 showRequest: false,
+                patients: [],
             },
             methods: {
                 showProcedures() {
-                    if (this.stage == 'Fifth stage') {
+                    if (this.stage == 'Fifth Stage') {
                         axios.get('/students/api/procedures/fifth').then(response => {
                             this.procedures = response.data.procedures;
                         })
                     }
-                    if (this.stage == 'Fourth stage') {
+                    if (this.stage == 'Fourth Stage') {
                         axios.get('/students/api/procedures/fourth').then(response => {
+                            console.log(response)
                             this.procedures = response.data.procedures;
                         })
                     }
@@ -228,21 +132,30 @@
                     this.showRequest = !this.showRequest;
                 },
                 sendRequest() {
-                    axios.post('/students/requests', {
-                        name: '<?php echo e(auth('student')->user()->name); ?>',
-                        stage: '<?php echo e(auth('student')->user()->stage); ?>',
-                        procedure: this.selected,
-                    })
-                        .then(function (response) {
-                            console.log(alert('success'));
+                    if (this.status == 'unavailable') {
+                        return alert("finish what's in your plate first bitch")
+                    } else {
+                        axios.post('/students/requests', {
+                            procedure: this.selected,
                         })
-                        .catch(function (error) {
-                            console.log(error);
-                        });
+                            .then(function (response) {
+                                console.log(alert('success'));
+
+                            })
+                            .catch(function (error) {
+                                console.log(error);
+                            });
+                    }
+                },
+                getMyPatients() {
+                    axios.get('/students/api/patients').then(response => {
+                        this.patients = response.data.patients
+                    })
                 }
             },
             mounted() {
                 this.showProcedures();
+                this.getMyPatients();
 
             }
         })

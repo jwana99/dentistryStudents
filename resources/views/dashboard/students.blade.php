@@ -1,8 +1,8 @@
 @extends('dashboard.layout')
 
 @section('content')
-    <div id="app" class="flex mt-3 w-full justify-center">
-        <div class="bg-gray-100 rounded-md shadow-md md:p-4 p-2 w-11/12">
+    <div id="app" class="">
+        <div class="">
             <h1 class="md:text-3xl text-2xl font-semibold text-purple-500 tracking-wide">Students</h1>
             {{--sorting--}}
             <div class="flex flex-wrap w-full">
@@ -17,7 +17,7 @@
                                 <path
                                     d="M12.9 14.32a8 8 0 1 1 1.41-1.41l5.35 5.33-1.42 1.42-5.33-5.34zM8 14A6 6 0 1 0 8 2a6 6 0 0 0 0 12z"/>
                             </svg>
-                        </div>t
+                        </div>
                     </div>
                     {{--grade--}}
                     <div class="my-1 md:my-3 mr-2">
@@ -39,27 +39,7 @@
                     </div>
                 </div>
                 {{--pagination--}}
-                <div class="flex justify-end w-full sm:w-4/12">
-                    <div class="flex mt-0 sm:mt-3 self-end md:self-start">
-                        <button @click="paginate(-1)"
-                                type="button"
-                                class="bg-white hover:bg-purple-600 hover:text-white focus:outline-none border focus:border-purple-600 border-gray-300 text-purple-700 font-extrabold text-md py-1 px-2 mr-2 rounded-md shadow-md">
-                            <svg class="fill-current h-8 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                <path d="M7.05 9.293L6.343 10 12 15.657l1.414-1.414L9.172 10l4.242-4.243L12 4.343z"/>
-                            </svg>
-                        </button>
-                        <button @click="paginate(1)"
-                                type="button"
-                                class="bg-white hover:bg-purple-600 hover:text-white focus:outline-none border focus:border-purple-600 border-gray-300 text-purple-700 font-extrabold text-md py-1 px-2 rounded-md shadow-md">
-                            <svg class="fill-current h-8 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                <path
-                                    d="M12.95 10.707l.707-.707L8 4.343 6.586 5.757 10.828 10l-4.242 4.243L8 15.657l4.95-4.95z"/>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
             </div>
-
             {{--requests table--}}
             <div class="grid grid-col-1 mt-4 overflow-x-auto overflow-y-auto">
                 <div class="flex">
@@ -97,8 +77,9 @@
                             </td>
                             <td class="text-sm py-2 px-3 border-t border-gray-400 border-gray-500">
                                 <span
-                                    class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-red-200 text-red-700">
-                                   Not Available
+                                    :class="student.status =='available' ? 'bg-purple-200 text-purple-700'  : 'bg-red-200 text-red-700'"
+                                    class="capitalize px-2 inline-flex text-xs leading-5 font-semibold rounded-full">
+                                   @{{ student.status }}
                                 </span>
                             </td>
                             <td class="text-sm py-2 px-3 border-t border-gray-400 border-gray-500">
@@ -107,13 +88,23 @@
                             <td class="text-sm py-2 px-3 border-t border-gray-400 border-gray-500">
                                 @{{ student.number }}
                             </td>
-                            <td class="text-sm py-2 px-3 border-t border-gray-400 border-gray-400 text-red-700 font-semibold hover:text-red-500 cursor-pointer">
+                            <td @click="deleteStudent(student.id)"
+                                class="text-sm py-2 px-3 border-t border-gray-400 border-gray-400 text-red-700 font-semibold hover:text-red-500 cursor-pointer">
                                 Delete
                             </td>
                         </tr>
                         </tbody>
                     </table>
                 </div>
+                <div
+                    class="flex border-t-2 border-purple-700 font-semibold w-full justify-between p-2 text-xs text-purple-700 tracking-wide leading-4">
+                    <div :class="{'text-gray-500' : page == 1}" @click="paginate(-1)"
+                         class="flex cursor-pointer">< Previous
+                    </div>
+                    <div class="flex">Page @{{ page }} of @{{ lastPage }}</div>
+                    <div :class="{'text-gray-500' : lastPage == page}" @click="paginate(1)"
+                         class="flex cursor-pointer">Next >
+                    </div>
             </div>
 
         </div>
@@ -150,7 +141,8 @@
                     }).then(response => {
                         this.students = response.data.students.data;
                         this.lastPage = response.data.students.last_page;
-                        console.log(this.students)
+                        this.page = response.data.students.current_page;
+
                     })
                 },
                 paginate(value) {
@@ -164,12 +156,17 @@
                     }
                     this.getData();
                 },
-
+                deleteStudent(id) {
+                    axios.delete(`/dashboard/students/${id}`).then(response => {
+                        console.log(response)
+                        window.location.reload()
+                    })
+                }
             },
             computed: {
                 searching() {
                     return this.students.filter(student => {
-                        return student.name.includes(this.searched)
+                        return student.name.toLocaleLowerCase().includes(this.searched.toLocaleLowerCase().trim())
                     })
                 }
             },

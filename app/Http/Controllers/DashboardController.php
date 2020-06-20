@@ -41,7 +41,7 @@ class DashboardController extends Controller
             }
 
         }
-        $students = $queryBuilder->paginate(2);
+        $students = $queryBuilder->paginate(10);
 
         $response = [
             "success" => true,
@@ -53,7 +53,7 @@ class DashboardController extends Controller
     public function patientsApi()
     {
         $queryBuilder = Patient::orderBy('id', 'desc');
-        $patients = $queryBuilder->paginate(2);
+        $patients = $queryBuilder->paginate(10);
 
         $response = [
             'success' => true,
@@ -77,7 +77,7 @@ class DashboardController extends Controller
 
         if ($request->has('procedure')) $queryBuilder->where('procedure', ucfirst($request->procedure));
 
-        $requests = $queryBuilder->paginate(2);
+        $requests = $queryBuilder->paginate(10);
 
         $response = [
             'success' => true,
@@ -86,8 +86,25 @@ class DashboardController extends Controller
         return Response::json($response);
     }
 
+    public function requestConfirmation(Student $student, Patient $patient)
+    {
+        $patient->student_id = $student->id;
+        $patient->status = 'unavailable';
+        $student->status = 'unavailable';
+        $patient->save();
+        $student->save();
+//     $patient->student()->associate($student);
+    }
+
     public function patientsPage()
     {
         return view('dashboard.patients');
+    }
+
+    public function delete(Student $student)
+    {
+        $student->delete();
+        $data = ["success" => true];
+        return Response::json($data);
     }
 }

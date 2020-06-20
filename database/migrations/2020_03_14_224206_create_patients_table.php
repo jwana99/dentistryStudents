@@ -18,6 +18,7 @@ class CreatePatientsTable extends Migration
             $table->string('name');
             $table->string('student_id')->nullable();
             $table->string('number');
+            $table->enum('status', ['available', 'unavailable'])->default('available');
             $table->string('procedure_type');
             $table->timestamps();
         });

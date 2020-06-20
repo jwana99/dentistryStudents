@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Enums\FifthProcedure;
 use App\Enums\FourthProcedure;
+use App\Patient;
 use App\Student;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
@@ -56,13 +57,28 @@ class StudentController extends Controller
 
     public function storeRequest(Request $request)
     {
+//        todo
+//        relationshit
+//        eagerloadingshit
         $rules = [
-            "name" => "required",
-            "stage" => "required",
-            "procedure" => "required",
+
+            'name' => 'required',
+            'procedure' => 'required',
+            'grade' => 'required',
+            'id' => 'required',
         ];
+
         $data = $this->validate($request, $rules);
+
+        $student = auth('student')->user();
+        $data["id"] = $student->id;
+        $data["name"] = $student->name;
+        $data["grade"] = $student->stage;
+
         \App\Request::create($data);
+//        $student = Student::find('id', auth);
+//        $student;
+
     }
 
     /**
@@ -94,6 +110,17 @@ class StudentController extends Controller
         $student = Student::create($data);
         Auth::guard('student')->login($student);
         return Response::redirectTo("/students/account");
+    }
+
+    public function getMyPatients()
+    {
+        $patients = Patient::where('student_id', auth('student')->user()->id)->get();
+        $response = [
+            'success' => true,
+            'patients' => $patients
+        ];
+
+        return Response::json($response);
     }
 
 //    public function login()

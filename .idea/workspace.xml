@@ -2,64 +2,106 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8687014c-1dc5-402b-b31e-160e3ec45a8c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Enums/FifthProcedure.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Enums/FourthProcedure.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/AdminAuthenticated​.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/UserAuthenticated.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Request.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_05_30_002202_create_requests_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icons/undraw_Taken_if77.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icons/undraw_celebrating_bol5.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icons/undraw_empty_xct9.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icons/undraw_not_found_60pq.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icons/undraw_security_o890.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/en/enums.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/vendor/laravelEnum/en/messages.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/404.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/mySideBar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/teethStudents.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/teethStudents.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/factories/PatientFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/factories/StudentFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/statisctics.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tailwind.configOld.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DashboardController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PatientController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PatientController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DashboardController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/StudentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/StudentController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Student.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Student.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootstrap/cache/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/bootstrap/cache/config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootstrap/cache/packages.php" beforeDir="false" afterPath="$PROJECT_DIR$/bootstrap/cache/packages.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootstrap/cache/services.php" beforeDir="false" afterPath="$PROJECT_DIR$/bootstrap/cache/services.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Patient.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Patient.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2020_02_24_154506_create_students_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_02_24_154506_create_students_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2020_03_14_224206_create_patients_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_03_14_224206_create_patients_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_05_30_002202_create_requests_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_05_30_002202_create_requests_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/acorn-node/node_modules/acorn/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/acorn-node/node_modules/acorn/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/acorn-node/node_modules/acorn/dist/acorn.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/acorn-node/node_modules/acorn/dist/acorn.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/acorn-node/node_modules/acorn/dist/acorn.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/acorn-node/node_modules/acorn/dist/acorn.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/acorn-node/node_modules/acorn/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/acorn-node/node_modules/acorn/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/css-unit-converter/.npmignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/css-unit-converter/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/css-unit-converter/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/css-unit-converter/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/css-unit-converter/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/css-unit-converter/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/css-unit-converter/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/tailwindcss/.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/tailwindcss/.eslintrc.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/tailwindcss/.travis.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/tailwindcss/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/tailwindcss/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/tailwindcss/dist/tailwind.css" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/tailwindcss/dist/tailwind.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/tailwindcss/dist/tailwind.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/tailwindcss/dist/tailwind.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/tailwindcss/dist/tailwind.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/tailwindcss/dist/tailwind.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/tailwindcss/dist/utilities.css" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/tailwindcss/dist/utilities.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/tailwindcss/dist/utilities.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/tailwindcss/dist/utilities.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/tailwindcss/dist/utilities.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/tailwindcss/dist/utilities.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/tailwindcss/lib/cli/emoji.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/tailwindcss/lib/cli/emoji.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/tailwindcss/lib/corePlugins.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/tailwindcss/lib/corePlugins.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/tailwindcss/lib/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/tailwindcss/lib/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/tailwindcss/lib/lib/substituteResponsiveAtRules.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/tailwindcss/lib/lib/substituteResponsiveAtRules.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/tailwindcss/lib/lib/substituteTailwindAtRules.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/tailwindcss/lib/lib/substituteTailwindAtRules.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/tailwindcss/lib/lib/substituteVariantsAtRules.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/tailwindcss/lib/lib/substituteVariantsAtRules.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/tailwindcss/lib/plugins/backgroundColor.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/tailwindcss/lib/plugins/backgroundColor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/tailwindcss/lib/plugins/borderColor.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/tailwindcss/lib/plugins/borderColor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/tailwindcss/lib/plugins/clear.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/tailwindcss/lib/plugins/clear.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/tailwindcss/lib/plugins/container.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/tailwindcss/lib/plugins/container.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/tailwindcss/lib/plugins/display.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/tailwindcss/lib/plugins/display.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/tailwindcss/lib/plugins/fontSize.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/tailwindcss/lib/plugins/fontSize.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/tailwindcss/lib/plugins/gap.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/tailwindcss/lib/plugins/gap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/tailwindcss/lib/plugins/gridAutoFlow.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/tailwindcss/lib/plugins/gridAutoFlow.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/tailwindcss/lib/plugins/gridColumn.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/tailwindcss/lib/plugins/gridColumn.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/tailwindcss/lib/plugins/gridColumnEnd.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/tailwindcss/lib/plugins/gridColumnEnd.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/tailwindcss/lib/plugins/gridColumnStart.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/tailwindcss/lib/plugins/gridColumnStart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/tailwindcss/lib/plugins/gridRow.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/tailwindcss/lib/plugins/gridRow.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/tailwindcss/lib/plugins/gridRowEnd.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/tailwindcss/lib/plugins/gridRowEnd.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/tailwindcss/lib/plugins/gridRowStart.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/tailwindcss/lib/plugins/gridRowStart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/tailwindcss/lib/plugins/gridTemplateColumns.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/tailwindcss/lib/plugins/gridTemplateColumns.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/tailwindcss/lib/plugins/gridTemplateRows.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/tailwindcss/lib/plugins/gridTemplateRows.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/tailwindcss/lib/plugins/objectFit.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/tailwindcss/lib/plugins/objectFit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/tailwindcss/lib/plugins/objectPosition.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/tailwindcss/lib/plugins/objectPosition.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/tailwindcss/lib/plugins/placeholderColor.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/tailwindcss/lib/plugins/placeholderColor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/tailwindcss/lib/plugins/position.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/tailwindcss/lib/plugins/position.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/tailwindcss/lib/plugins/rotate.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/tailwindcss/lib/plugins/rotate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/tailwindcss/lib/plugins/scale.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/tailwindcss/lib/plugins/scale.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/tailwindcss/lib/plugins/skew.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/tailwindcss/lib/plugins/skew.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/tailwindcss/lib/plugins/textColor.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/tailwindcss/lib/plugins/textColor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/tailwindcss/lib/plugins/transform.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/tailwindcss/lib/plugins/transform.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/tailwindcss/lib/plugins/translate.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/tailwindcss/lib/plugins/translate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/tailwindcss/lib/processTailwindFeatures.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/tailwindcss/lib/processTailwindFeatures.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/tailwindcss/lib/util/createUtilityPlugin.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/tailwindcss/lib/util/createUtilityPlugin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/tailwindcss/lib/util/processPlugins.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/tailwindcss/lib/util/processPlugins.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/tailwindcss/node_modules/chalk/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/tailwindcss/node_modules/chalk/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/tailwindcss/node_modules/chalk/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/tailwindcss/node_modules/chalk/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/tailwindcss/node_modules/chalk/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/tailwindcss/node_modules/chalk/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/tailwindcss/node_modules/chalk/source/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/tailwindcss/node_modules/chalk/source/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/tailwindcss/node_modules/chalk/source/templates.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/tailwindcss/node_modules/chalk/source/templates.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/tailwindcss/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/tailwindcss/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/tailwindcss/scripts/rebuildFixtures.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/tailwindcss/scripts/rebuildFixtures.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/tailwindcss/stubs/defaultConfig.stub.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/tailwindcss/stubs/defaultConfig.stub.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/tailwindcss/stubs/simpleConfig.stub.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/tailwindcss/stubs/simpleConfig.stub.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/dashboard/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/layout.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/dashboard/patients.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/patients.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/dashboard/requests.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/requests.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/studentProfile.blade.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/dashboard/students.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/students.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/patients/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/patients/register.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/students/account.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/students/account.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/students/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/students/login.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/students/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/students/register.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/students/requestPatient.blade.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/wPGlWqKVTyjP8MU5C04iNp64CZ08F4aZaga1WGJM" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/storage/framework/views/0917e30e0340e39de879d2e663d685dff0b866a1.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/0917e30e0340e39de879d2e663d685dff0b866a1.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/storage/framework/views/121ff16a9ca80dbadd4e008cd270ade45e13594a.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/121ff16a9ca80dbadd4e008cd270ade45e13594a.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/47dc861e77eb4182615a63cf5f7b8b936ef2d29a.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/47dc861e77eb4182615a63cf5f7b8b936ef2d29a.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/1e061d2507a344e94fa18cf1f1c38f5d15bb1a28.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/1e061d2507a344e94fa18cf1f1c38f5d15bb1a28.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/storage/framework/views/63b6089d611eda0c52b7b4f65bf57ff31619ac9c.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/63b6089d611eda0c52b7b4f65bf57ff31619ac9c.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/storage/framework/views/74ae46ad79313aeb965463dc5392e3fad3414fc5.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/74ae46ad79313aeb965463dc5392e3fad3414fc5.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/storage/framework/views/8426053d0572ba4d117e522b69ab72c0e5f21b42.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/8426053d0572ba4d117e522b69ab72c0e5f21b42.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/9f09a4a65bc7d8b52cf045a1a3fdda455e45ae2a.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/9f09a4a65bc7d8b52cf045a1a3fdda455e45ae2a.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/storage/framework/views/bfce28271eba32cdf55a5d8012d560ebe19866bd.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/bfce28271eba32cdf55a5d8012d560ebe19866bd.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/storage/framework/views/caf4aa8ef3d3f820ad701771559472047a16894e.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/caf4aa8ef3d3f820ad701771559472047a16894e.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/cd23ede10d7477509a2022d796db79a20ca3b0da.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/cd23ede10d7477509a2022d796db79a20ca3b0da.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/storage/logs/laravel.log" beforeDir="false" afterPath="$PROJECT_DIR$/storage/logs/laravel.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_files.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_files.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +113,7 @@
     <execution />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="185" />
+    <option name="totalTimeSeconds" value="186" />
     <option name="gitIntegration" value="true" />
     <option name="naggedAbout" value="1" />
   </component>
@@ -204,7 +246,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -282,6 +324,26 @@
       <workItem from="1590879898883" duration="65000" />
       <workItem from="1590879986245" duration="1247000" />
       <workItem from="1590881432481" duration="195000" />
+      <workItem from="1590882206508" duration="444000" />
+      <workItem from="1590882692247" duration="9988000" />
+      <workItem from="1590894827117" duration="28285000" />
+      <workItem from="1590996769903" duration="5003000" />
+      <workItem from="1591002221648" duration="4015000" />
+      <workItem from="1591048819972" duration="23119000" />
+      <workItem from="1591134136075" duration="16608000" />
+      <workItem from="1591315934611" duration="320000" />
+      <workItem from="1591316281662" duration="9612000" />
+      <workItem from="1591572946486" duration="11000" />
+      <workItem from="1591576846335" duration="628000" />
+      <workItem from="1591577565704" duration="785000" />
+      <workItem from="1591578454830" duration="94000" />
+      <workItem from="1591578577479" duration="1057000" />
+      <workItem from="1591579660364" duration="602000" />
+      <workItem from="1591580489659" duration="1965000" />
+      <workItem from="1591582499711" duration="224000" />
+      <workItem from="1591582752889" duration="163000" />
+      <workItem from="1591582993310" duration="493000" />
+      <workItem from="1592679610102" duration="333000" />
     </task>
     <task id="LOCAL-00001" summary="commit 1">
       <created>1590457364990</created>
@@ -304,7 +366,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590535776672</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="commit 4">
+      <created>1590882304293</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1590882304293</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -327,17 +396,14 @@
     <MESSAGE value="commit 1" />
     <MESSAGE value="commit 2" />
     <MESSAGE value="commit 3" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit 3" />
+    <MESSAGE value="commit 4" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit 4" />
   </component>
   <component name="WindowStateProjectService">
     <state x="277" y="36" key="#CLI_Interpreters" timestamp="1587484072973">
       <screen x="0" y="0" width="1360" height="768" />
     </state>
     <state x="277" y="36" key="#CLI_Interpreters/0.0.1360.768@0.0.1360.768" timestamp="1587484072973" />
-    <state x="272" y="42" key="#Notifications" timestamp="1582372234077">
-      <screen x="0" y="0" width="1360" height="768" />
-    </state>
-    <state x="272" y="42" key="#Notifications/0.0.1360.768@0.0.1360.768" timestamp="1582372234077" />
     <state x="279" y="42" key="#Updates" timestamp="1583155983939">
       <screen x="0" y="0" width="1360" height="768" />
     </state>
@@ -358,14 +424,18 @@
       <screen x="0" y="0" width="1360" height="768" />
     </state>
     <state x="410" y="138" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1360.768@0.0.1360.768" timestamp="1590794223265" />
-    <state x="176" y="0" key="CommitChangelistDialog2" timestamp="1590535772989">
+    <state x="176" y="0" key="CommitChangelistDialog2" timestamp="1590882296786">
       <screen x="0" y="0" width="1360" height="768" />
     </state>
-    <state x="176" y="0" key="CommitChangelistDialog2/0.0.1360.768@0.0.1360.768" timestamp="1590535772989" />
+    <state x="176" y="0" key="CommitChangelistDialog2/0.0.1360.768@0.0.1360.768" timestamp="1590882296786" />
     <state x="457" y="296" key="ComposerInitDialogKey" timestamp="1587481121911">
       <screen x="0" y="0" width="1360" height="768" />
     </state>
     <state x="457" y="296" key="ComposerInitDialogKey/0.0.1360.768@0.0.1360.768" timestamp="1587481121911" />
+    <state x="92" y="92" width="1176" height="584" key="DiffContextDialog" timestamp="1590888342307">
+      <screen x="0" y="0" width="1360" height="768" />
+    </state>
+    <state x="92" y="92" width="1176" height="584" key="DiffContextDialog/0.0.1360.768@0.0.1360.768" timestamp="1590888342307" />
     <state x="477" y="136" key="FileChooserDialogImpl" timestamp="1587483369580">
       <screen x="0" y="0" width="1360" height="768" />
     </state>
@@ -394,14 +464,18 @@
       <screen x="0" y="0" width="1360" height="768" />
     </state>
     <state x="515" y="307" key="NewPhpFileDialog/0.0.1360.768@0.0.1360.768" timestamp="1590783104757" />
-    <state x="198" y="26" key="SettingsEditor" timestamp="1590881151470">
+    <state x="198" y="26" key="SettingsEditor" timestamp="1591582722055">
       <screen x="0" y="0" width="1360" height="768" />
     </state>
-    <state x="198" y="26" key="SettingsEditor/0.0.1360.768@0.0.1360.768" timestamp="1590881151470" />
-    <state width="498" height="446" key="SwitcherDM" timestamp="1585701435809">
+    <state x="198" y="26" key="SettingsEditor/0.0.1360.768@0.0.1360.768" timestamp="1591582722055" />
+    <state width="498" height="446" key="SwitcherDM" timestamp="1590977462130">
       <screen x="0" y="0" width="1360" height="768" />
     </state>
-    <state width="498" height="446" key="SwitcherDM/0.0.1360.768@0.0.1360.768" timestamp="1585701435809" />
+    <state width="498" height="446" key="SwitcherDM/0.0.1360.768@0.0.1360.768" timestamp="1590977462130" />
+    <state x="272" y="116" key="Vcs.Push.Dialog.v2" timestamp="1590975097485">
+      <screen x="0" y="0" width="1360" height="768" />
+    </state>
+    <state x="272" y="116" key="Vcs.Push.Dialog.v2/0.0.1360.768@0.0.1360.768" timestamp="1590975097485" />
     <state x="92" y="92" width="1176" height="584" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1585460799709">
       <screen x="0" y="0" width="1360" height="768" />
     </state>
@@ -410,25 +484,21 @@
       <screen x="0" y="0" width="1360" height="768" />
     </state>
     <state x="375" y="207" key="com.intellij.ide.util.TipDialog/0.0.1360.768@0.0.1360.768" timestamp="1587471531044" />
-    <state x="369" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1590869378125">
+    <state x="369" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1591078465238">
       <screen x="0" y="0" width="1360" height="768" />
     </state>
-    <state x="369" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1360.768@0.0.1360.768" timestamp="1590869378125" />
+    <state x="369" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1360.768@0.0.1360.768" timestamp="1591078465238" />
     <state x="0" y="0" width="736" height="768" key="find.popup" timestamp="1590814989643">
       <screen x="0" y="0" width="1360" height="768" />
     </state>
     <state x="0" y="0" width="736" height="768" key="find.popup/0.0.1360.768@0.0.1360.768" timestamp="1590814989643" />
-    <state width="600" height="424" key="javadoc.popup" timestamp="1582650465508">
+    <state x="336" y="172" width="672" height="677" key="run.anything.popup" timestamp="1590975901032">
       <screen x="0" y="0" width="1360" height="768" />
     </state>
-    <state width="600" height="424" key="javadoc.popup/0.0.1360.768@0.0.1360.768" timestamp="1582650465508" />
-    <state x="336" y="172" width="672" height="677" key="run.anything.popup" timestamp="1590870437105">
+    <state x="336" y="172" width="672" height="677" key="run.anything.popup/0.0.1360.768@0.0.1360.768" timestamp="1590975901032" />
+    <state x="396" y="111" width="672" height="678" key="search.everywhere.popup" timestamp="1591581116125">
       <screen x="0" y="0" width="1360" height="768" />
     </state>
-    <state x="336" y="172" width="672" height="677" key="run.anything.popup/0.0.1360.768@0.0.1360.768" timestamp="1590870437105" />
-    <state x="396" y="111" width="672" height="678" key="search.everywhere.popup" timestamp="1590879359920">
-      <screen x="0" y="0" width="1360" height="768" />
-    </state>
-    <state x="396" y="111" width="672" height="678" key="search.everywhere.popup/0.0.1360.768@0.0.1360.768" timestamp="1590879359920" />
+    <state x="396" y="111" width="672" height="678" key="search.everywhere.popup/0.0.1360.768@0.0.1360.768" timestamp="1591581116125" />
   </component>
 </project>

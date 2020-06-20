@@ -8,6 +8,7 @@ Route::post('/students/login', 'Auth\LoginController@login');
 Route::get('/students/logout', 'Auth\LoginController@logout');
 Route::get('/students/api/procedures/{stage}', 'StudentController@procedures');
 Route::post('/students/requests', 'StudentController@storeRequest');
+Route::get('/students/api/patients', 'StudentController@getMyPatients');
 
 
 Route::get('/patients/register', 'PatientController@index');
@@ -22,6 +23,13 @@ Route::group(['middleware' => ['auth:student', 'admin']], function () {
     Route::get('/dashboard/patients', 'DashboardController@patientsPage');
     Route::get('/dashboard/api/patients', 'DashboardController@patientsApi');
     Route::get('/dashboard/api/requests', 'DashboardController@requestsApi');
+    Route::post('/dashboard/requests/confirmation/{student}/{patient}', 'DashboardController@requestConfirmation');
+    Route::delete('/dashboard/students/{student}', 'DashboardController@delete');
+
+});
+Route::get('/fakerdata', function () {
+    $students = factory(App\Student::class, 100)->create();
+    $patients = factory(App\Patient::class, 100)->create();
 });
 
 Route::view('/404', '404');
